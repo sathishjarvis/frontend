@@ -1,0 +1,162 @@
+/* hospitality */
+
+.image2{
+
+  height: 220px !important;
+}
+
+.color{
+  background: #000;
+}
+
+
+/* Base Styles */
+.hospitality-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hospitality-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hospitality-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.hospitality-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  position: relative;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-overlay p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #e67e22;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.explore-btn:hover {
+  background-color: #d35400;
+}
+
+/* Card Sizing */
+.service-card.large {
+  grid-column: span 2;
+  height: 400px;
+}
+
+.service-card.medium {
+  height: 350px;
+}
+
+.service-card.small {
+  height: 250px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .service-card.large {
+    grid-column: span 1;
+    height: 350px;
+  }
+  
+  .service-card.medium {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hospitality-page {
+    padding: 1rem;
+  }
+  
+  .hospitality-header h1 {
+    font-size: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card {
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hospitality-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hospitality-header p {
+    font-size: 1rem;
+  }
+  
+  .card-overlay {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .card-overlay h3 {
+    font-size: 1.3rem;
+  }
+}

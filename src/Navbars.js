@@ -15,7 +15,7 @@ const Navbars = () => {
     { id: 'hospitality', label: 'Hospitality', icon: <FaConciergeBell />, path: '/hospitality' },
     { id: 'brokerage', label: 'Brokerage', icon: <FaHandshake />, path: '/brokerage' },
     { id: 'service', label: 'Service', icon: <FaTools />, path: '/service' },
-    { id: 'contact', label: 'Contact Us', icon: <FaPhoneAlt />, path: '/contact' }
+    // { id: 'contact', label: 'Contact Us', icon: <FaPhoneAlt />, path: '/contact' }
   ];
 
   // Close mobile menu when clicking a link
@@ -60,7 +60,7 @@ const Navbars = () => {
         {/* Button on right - updated with NavLink */}
         <div className="nav-button-container">
           <NavLink to="/contact" className="nav-cta-button" onClick={closeMobileMenu}>
-            Get Started
+            Contact Us
           </NavLink>
         </div>
       </div>

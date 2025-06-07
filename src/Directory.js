@@ -4,10 +4,10 @@ import Navbars from "./Navbars";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
-// import { useNavigate } from "react-router";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 import Footer from "./Footer";
+import JsonData from "./data/directory.json";
 
 const Directory = () => {
 
@@ -16,18 +16,19 @@ const Directory = () => {
     const [error, setError] = useState(null);
     const [filteredData, setfilteredData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("")
+    const [editData, setEditData] = useState("")
+    const [editId, setEditId] = useState("")
 
     // const navigate = useNavigate();
 
     //for edit the data directory
-    const [editId, setEditId] = useState(null);
-    const [editData, setEditData] = useState({});
+  
 
 
     // Fetch Data Function
     const fetchData = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/directory/list");
+            const response = await axios.get(JsonData);
             setData(response.data);
             setLoading(false);
             setfilteredData(response.data);
@@ -146,7 +147,16 @@ const Directory = () => {
                                     <input type="text" name="Specialization" placeholder="enter Specialization" value={editData.Specialization} onChange={handleChange} className="form-control transparent" />
                                 ) : (item.Specialization && item.Specialization !== null ? item.Specialization : "--")}</td>
                             </tr>
-                        ))}
+                        )) ||
+                            JsonData.data.map(user => (
+                                <tr key={user.id}>
+                                    <td>{user.Name}</td>
+                                    <td>{user.Phone}</td>
+                                    <td>{user.Profession}</td>
+                                    <td>{user.Location}</td>
+                                </tr>
+                            ))
+                        }
                     </tbody>
                 </Table>
             ) : (

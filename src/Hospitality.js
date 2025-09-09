@@ -60,7 +60,9 @@ const Hospitality = () => {
 
   return (
     <div>
+      <div className="container">
       <Navbars />
+      </div>
 
       <div className="hospitality-page">
       <div className="hospitality-header">

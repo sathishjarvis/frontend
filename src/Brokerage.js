@@ -64,7 +64,9 @@ const Brokerage = () => {
 
   return (
     <div>
+      <div className="container">
       <Navbars />
+      </div>
 
       <div className="brokerage-container">
       <div className="brokerage-header">

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './About';
 import Home from './Home';
-import Directory from './Directory';
+// import Directory from './Directory';
 import Userform from './UserForm';
 import Hospitality from './Hospitality';
 import Brokerage from './Brokerage';
@@ -13,6 +13,7 @@ import Footer from './Footer';
 import DisplayDirectory from './DisplayDirectory';
 import Login from './Login';
 import Service from './Service';
+import Profesionals from './Profesionals';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/directory" element={<Directory />} />
+          <Route path="/directory" element={<Profesionals />} />
           <Route path="/Display" element={<DisplayDirectory />} />
           <Route path="/directory/add" element={<Userform />} />
           <Route path="/hospitality" element={<Hospitality />} />

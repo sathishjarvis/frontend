@@ -72,7 +72,9 @@ const Service = () => {
   };
   return (
     <div>
+      <div className="container">
       <Navbars />
+      </div>
 
       <div className="service-page">
         <motion.div

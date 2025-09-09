@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import logo from './images/play_logo.png';
-import { FaBars, FaTimes, FaHome, FaInfoCircle, FaBook, FaConciergeBell, FaHandshake, FaTools, FaPhoneAlt } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaInfoCircle, FaBook, FaConciergeBell, FaHandshake, FaTools } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import './App.css';
 
@@ -11,11 +11,10 @@ const Navbars = () => {
   const navItems = [
     { id: 'home', label: 'Home', icon: <FaHome />, path: '/' },
     { id: 'about', label: 'About', icon: <FaInfoCircle />, path: '/about' },
-    { id: 'directory', label: 'Directory', icon: <FaBook />, path: '/directory' },
+    { id: 'display', label: 'Directoy', icon: <FaBook />, path: '/Display' },
     { id: 'hospitality', label: 'Hospitality', icon: <FaConciergeBell />, path: '/hospitality' },
     { id: 'brokerage', label: 'Brokerage', icon: <FaHandshake />, path: '/brokerage' },
     { id: 'service', label: 'Service', icon: <FaTools />, path: '/service' },
-    // { id: 'contact', label: 'Contact Us', icon: <FaPhoneAlt />, path: '/contact' }
   ];
 
   // Close mobile menu when clicking a link
@@ -23,8 +22,6 @@ const Navbars = () => {
     setIsMobileMenuOpen(false);
   };
   return (
-
-
     <nav className="navbar bg-white rounded">
       <div className="navbar-container rounded-3 w-100">
         {/* Logo on left */}

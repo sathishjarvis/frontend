@@ -14,16 +14,17 @@ const About = () => {
   ];
 
   const teamMembers = [
-    { id: 1, name: 'Alex Johnson', role: 'CEO & Founder', image: '/team1.jpg' },
-    { id: 2, name: 'Sarah Williams', role: 'Hospitality Director', image: '/team2.jpg' },
-    { id: 3, name: 'Michael Chen', role: 'Brokerage Manager', image: '/team3.jpg' },
-    { id: 4, name: 'Emily Rodriguez', role: 'Service Coordinator', image: '/team4.jpg' }
+    { id: 1, name: 'Abcd', role: 'CEO & Founder', image: '/team1.jpg' },
+    { id: 2, name: 'Abcd', role: 'Hospitality Director', image: '/team2.jpg' },
+    { id: 3, name: 'Abcd', role: 'Brokerage Manager', image: '/team3.jpg' },
+    { id: 4, name: 'Abcd', role: 'Service Coordinator', image: '/team4.jpg' }
   ];
 
   return (
     <div>
+      <div className="container">
       <Navbars />
-
+      </div>
       <div className="about-page">
         {/* Hero Section */}
         <section className="about-hero">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaInstagram , FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
@@ -16,9 +15,9 @@ const Footer = () => {
           <h3>Quick Links</h3>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/directory">Directory</a></li>
+            <li><a href="/Display">Directory</a></li>
             <li><a href="/hospitality">Hospitality</a></li>
-            <li><a href="/commision">Commision</a></li>
+            <li><a href="/contact">Commision</a></li>
           </ul>
         </div>
         
@@ -46,7 +45,7 @@ const Footer = () => {
         <div className="footer-links">
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
-          <a href="/cookies">Cookie Policy</a>
+          <a href="https://sathishjarvis.github.io/one-peace-tech/">The One Peace Technology</a>
         </div>
       </div>
     </footer>

@@ -2,6 +2,7 @@ import React from 'react';
 import Navbars from './Navbars';
 import { FaBuilding, FaConciergeBell, FaHandshake, FaTools } from 'react-icons/fa';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -20,7 +21,7 @@ const Home = () => {
       description: "Discover our exceptional hospitality services and amenities",
       icon: <FaConciergeBell className="button-icon" />,
       color: "#1cc88a",
-      link: "./hospitality"
+      link: "/hospitality"
     },
     {
       id: 3,
@@ -28,7 +29,7 @@ const Home = () => {
       description: "Professional brokerage services for your business needs",
       icon: <FaHandshake className="button-icon" />,
       color: "#f6c23e",
-      link: "./brokerage"
+      link: "/brokerage"
     },
     {
       id: 4,
@@ -36,7 +37,7 @@ const Home = () => {
       description: "Premium service solutions tailored to your requirements",
       icon: <FaTools className="button-icon" />,
       color: "#e74a3b",
-      link: "./service"
+      link: "/service"
     }
   ];
 
@@ -54,9 +55,9 @@ const Home = () => {
 
           <div className="button-grid">
             {buttons.map((button) => (
-              <a
+              <Link
                 key={button.id}
-                href={button.link}
+                to={button.link}
                 className="service-button"
                 style={{ '--button-color': button.color }}
               >
@@ -68,7 +69,7 @@ const Home = () => {
                   <p>{button.description}</p>
                 </div>
                 <div className="button-overlay"></div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
